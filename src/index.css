@@ -2,16 +2,10 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+  color: hsl(211, 0%, 90%);
+  background-color: hsl(211, 90%, 10%);
+  margin: 0 auto;
+  padding: 0;
 }
 
 a {
@@ -24,16 +18,31 @@ a:hover {
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
+  margin: 0 auto;
+  display: grid;
+  background-color: hsl(211, 20%, 20%);
   min-width: 320px;
   min-height: 100vh;
+}
+
+header,
+footer {
+  position: fixed;
+  padding: 0 10px;
+  background-color: hsl(211, 50%, 30%);
+  margin: 0 auto;
+}
+header {
+  top: 0;
+}
+footer {
+  bottom: 0;
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  padding: 0 10px;
 }
 
 button {
@@ -66,4 +75,19 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+.skip-to-main-content-link {
+  position: absolute;
+  left: -9999px;
+  z-index: 999;
+  padding: 1em;
+  background-color: black;
+  color: white;
+  opacity: 0;
+}
+.skip-to-main-content-link:focus {
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 1;
 }

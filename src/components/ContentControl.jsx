@@ -1,3 +1,6 @@
+import AllArticles from "./AllArticles"
+
+
 function ContentControl(){
 return(
     <main>
@@ -6,3 +9,5 @@ return(
     </main>
 )
 }
+
+export default ContentControl
