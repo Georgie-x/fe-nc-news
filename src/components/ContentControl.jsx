@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import { AllArticles, SingleArticle, ErrorPage } from "./index";
+import { AllArticles, SingleArticle, ErrorPage, AllTopics } from "./index";
 
 function ContentControl() {
   return (
@@ -9,7 +9,7 @@ function ContentControl() {
         <Route path="/" element={<AllArticles />} />
           <Route path="/articles" element={<AllArticles />} />
           <Route path="/articles/:article_id" element={<SingleArticle />} />
-          <Route path="/topics" element={<SingleArticle />} />
+          <Route path="/topics" element={<AllTopics />} />
           <Route path="/*" element={<ErrorPage />} />
         </Routes>
       </div>
