@@ -21,7 +21,9 @@ useEffect(()=>{
         <ul>
             {articles.map((article => {
                 return(<li className="all-articles" key={article.article_id}>
-                    <p>{article.title}</p>
+                    <img src={article.article_img_url}/>    
+                    <p>#{article.article_id} {article.title} by {article.author} {article.created_at}</p>
+                    <hr></hr>
 
 
                 </li>)

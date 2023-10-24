@@ -26,6 +26,7 @@ body {
   background-color: hsl(211, 90%, 10%);
   min-width: 320px;
   min-height: 100vh;
+  
 }
 
 header {
@@ -42,7 +43,12 @@ h1 {
   margin: 5px auto;
 }
 ul{
-  text-decoration: none;
+  list-style: none;
+}
+
+img{
+  height: 4em;
+  display:inline-block;
 }
 
 h2 {
