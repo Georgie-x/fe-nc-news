@@ -1,16 +1,20 @@
+/* *{
+  border: 1px solid red
+} */
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
   color: hsl(211, 0%, 90%);
   background-color: hsl(211, 90%, 10%);
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
 }
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: hsl(211, 66%, 66%);
   text-decoration: inherit;
 }
 a:hover {
@@ -19,30 +23,30 @@ a:hover {
 
 body {
   margin: 0 auto;
-  display: grid;
-  background-color: hsl(211, 20%, 20%);
+  background-color: hsl(211, 90%, 10%);
   min-width: 320px;
   min-height: 100vh;
 }
 
-header,
-footer {
-  position: fixed;
-  padding: 0 10px;
-  background-color: hsl(211, 50%, 30%);
-  margin: 0 auto;
-}
 header {
+  background-color: hsl(211, 80%, 20%);
+  padding: 0 10px;
+  margin-top: 0;
   top: 0;
-}
-footer {
-  bottom: 0;
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
   padding: 0 10px;
+  margin: 5px auto;
+}
+ul{
+  text-decoration: none;
+}
+
+h2 {
+  color: hsl(211, 66%, 66%);
 }
 
 button {
@@ -64,19 +68,6 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
-
 .skip-to-main-content-link {
   position: absolute;
   left: -9999px;
@@ -91,3 +82,14 @@ button:focus-visible {
   transform: translateX(-50%);
   opacity: 1;
 }
+
+/* 
+@media only screen and (min-width: 600px) {
+  .contentContainer{
+   
+    margin: 0 auto;
+    width:60vw;
+    gap:10px;
+    background-color: #ffffff;
+  }
+} */
