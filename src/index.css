@@ -7,9 +7,34 @@
   line-height: 1.5;
   font-weight: 400;
   color: hsl(211, 0%, 90%);
-  background-color: hsl(211, 90%, 10%);
-  margin: 0;
-  padding: 0;
+  background-color: hsl(211, 85%, 15%);
+}
+
+body {
+  margin: 0px; 
+  padding: 100px 0;
+}
+
+header {
+  background-color: hsl(211, 80%, 20%);
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+
+  
+}
+
+main{
+  background-color: hsl(211, 80%, 10%);
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  background-color: hsl(211, 80%, 20%);
+  width: 100%;
+  justify-content: center;
 }
 
 a {
@@ -21,69 +46,35 @@ a:hover {
   color: hsl(31, 70%, 70%);
 }
 
-body {
-  margin: 0px;
-  padding: 10px 0;
-  background-color: hsl(211, 90%, 7%);
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-header {
-  background-color: hsl(211, 80%, 20%);
-  padding: 0 10px;
-  position: fixed;
-  width: 100%;
-  margin-top: 0;
-  top: 0;
-  justify-content: center;
-}
-
-footer {
-  position: fixed;
-  bottom: 0;
-
-  background-color: hsl(211, 80%, 20%);
-  width: 100%;
-  justify-content: center;
-}
-
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
-  padding: 0 10px;
-  margin: 5px auto;
+  margin: 5px 0;
 }
-.navrow {
-  display: flex;
-  gap: 20px;
-  padding-bottom: 10px;
+h2 {
+  padding: 0 10px;
+  color: hsl(211, 66%, 66%);
+}
+h3{
+  padding: 0 10px;
+  color: hsl(211, 66%, 66%); 
 }
 
 ul {
   list-style: none;
 }
 
-.small-img {
-  height: 4em;
-}
-.large-img {
-  height: 8em;
-}
-
-h2 {
-  padding: 0 10px;
-  color: hsl(211, 66%, 66%);
+p{
+  padding: 0px;
+  margin: 0px;
 }
 
 button {
+  display: inline-block;
   border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+  border: 1px solid hsl(211, 66%, 66%);
+  background-color: hsl(211, 80%, 10%);
+  color: hsl(31, 70%, 70%);
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -95,11 +86,19 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-.contentContainer {
-  width: 100vw;
-  text-align: justify;
-  text-justify: inter-word;
-  padding-top: 30px;
+details summary {
+  cursor: pointer;
+}
+
+.flex-across {
+  display: flex;
+  gap: 20px;
+}
+.small-img {
+  height: 4em;
+}
+.large-img {
+  height: 8em;
 }
 
 .skip-to-main-content-link {
@@ -115,6 +114,11 @@ button:focus-visible {
   left: 50%;
   transform: translateX(-50%);
   opacity: 1;
+}
+
+.hilight{
+  font-weight: 900;
+  color: hsl(31, 70%, 70%);
 }
 
 /* 

@@ -1,6 +1,6 @@
 function Footer(){
     return(
-        <footer className="navrow">
+        <footer className="flex-across">
             <p><a href="#header">Back to Top</a></p>
             <p>Georgie 2023</p>
         </footer>
