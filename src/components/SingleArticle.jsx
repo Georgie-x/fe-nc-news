@@ -30,11 +30,15 @@ function SingleArticle() {
       <p>{article.created_at}</p>
       <img className="large.img" src={article.article_img_url} />
       <p>{article.body}</p>
-      <p>Votes: {article.votes}</p>
+      <ChangeVotes article={article}/>
+
+
+      
       <details open={isOpen} onChange={()=> {setIsOpen(true)}}>
         <summary>See Comments</summary>
         <Comments />
       </details>
+
       <br />
       <hr></hr>
     
