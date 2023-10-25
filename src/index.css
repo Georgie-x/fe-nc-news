@@ -22,32 +22,30 @@ a:hover {
 }
 
 body {
-  margin: 0;
+  margin: 0px;
+  padding: 10px 0;
   background-color: hsl(211, 90%, 7%);
   min-width: 320px;
   min-height: 100vh;
-  
-
 }
 
 header {
   background-color: hsl(211, 80%, 20%);
   padding: 0 10px;
-  position:fixed;
-  width:100%;
+  position: fixed;
+  width: 100%;
   margin-top: 0;
   top: 0;
   justify-content: center;
 }
 
-footer{
-  position:fixed;
+footer {
+  position: fixed;
   bottom: 0;
-  padding: 0 10px;
+
   background-color: hsl(211, 80%, 20%);
-  width:100%;
+  width: 100%;
   justify-content: center;
- 
 }
 
 h1 {
@@ -56,19 +54,21 @@ h1 {
   padding: 0 10px;
   margin: 5px auto;
 }
-.navrow{
-  display:flex;
+.navrow {
+  display: flex;
   gap: 20px;
   padding-bottom: 10px;
 }
 
-ul{
+ul {
   list-style: none;
 }
 
-img{
+.small-img {
   height: 4em;
-  display:inline-block;
+}
+.large-img {
+  height: 8em;
 }
 
 h2 {
@@ -95,13 +95,11 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-.contentContainer{
+.contentContainer {
   width: 100vw;
   text-align: justify;
   text-justify: inter-word;
   padding-top: 30px;
-
-
 }
 
 .skip-to-main-content-link {

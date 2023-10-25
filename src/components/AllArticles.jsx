@@ -25,7 +25,7 @@ function AllArticles() {
         {articles.map((article) => {
           return (
             <li className="all-articles" key={article.article_id}>
-              <img src={article.article_img_url} />
+              <img className="small-img"src={article.article_img_url} />
               <p>
                 #{article.article_id} | <Link to={`/articles/${article.article_id}`}>{article.title}</Link> by {article.author} {article.created_at}
               </p>

@@ -25,8 +25,10 @@ function SingleArticle() {
       <p>Author: {article.author}</p>
       <p>Topic: {article.topic} </p>
       <p>{article.created_at}</p>
-      <img src={article.article_img_url} /> <p>{article.body}</p>
+      <img className="large.img" src={article.article_img_url} /> <p>{article.body}</p>
       <p>Votes: {article.votes}</p>
+      <br />
+      <hr></hr>
     </>
   );
 }
