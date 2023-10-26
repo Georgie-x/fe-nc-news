@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import Comments from "./Comments";
+import {Comments, ChangeVotes} from "./index"
 
 function SingleArticle() {
 
@@ -30,11 +30,15 @@ function SingleArticle() {
       <p>{article.created_at}</p>
       <img className="large.img" src={article.article_img_url} />
       <p>{article.body}</p>
-      <p>Votes: {article.votes}</p>
+      <ChangeVotes article={article} setArticle={setArticle}/>
+
+
+      
       <details open={isOpen} onChange={()=> {setIsOpen(true)}}>
         <summary>See Comments</summary>
         <Comments />
       </details>
+
       <br />
       <hr></hr>
     
