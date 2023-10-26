@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
+
 function Comments() {
   const { article_id } = useParams();
   const [isLoading, setIsLoading] = useState(true);

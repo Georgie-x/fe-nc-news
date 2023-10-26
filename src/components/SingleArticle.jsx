@@ -1,14 +1,13 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import {Comments, ChangeVotes} from "./index"
+import { Comments, ChangeVotes, AddComment } from "./index";
 
 function SingleArticle() {
-
   const { article_id } = useParams();
   const [article, setArticle] = useState({});
   const [isLoading, setIsLoading] = useState(true);
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     axios
@@ -30,18 +29,19 @@ function SingleArticle() {
       <p>{article.created_at}</p>
       <img className="large.img" src={article.article_img_url} />
       <p>{article.body}</p>
-      <ChangeVotes article={article} setArticle={setArticle}/>
-
-
-      
-      <details open={isOpen} onChange={()=> {setIsOpen(true)}}>
+      <ChangeVotes article={article} setArticle={setArticle} />
+      <details
+        open={isOpen}
+        onChange={() => {
+          setIsOpen(true);
+        }}
+      >
         <summary>See Comments</summary>
+        <AddComment />
         <Comments />
       </details>
-
       <br />
       <hr></hr>
-    
     </>
   );
 }
