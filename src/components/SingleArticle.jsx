@@ -30,7 +30,7 @@ function SingleArticle() {
       <p>{article.created_at}</p>
       <img className="large.img" src={article.article_img_url} />
       <p>{article.body}</p>
-      <ChangeVotes article={article}/>
+      <ChangeVotes article={article} setArticle={setArticle}/>
 
 
       
