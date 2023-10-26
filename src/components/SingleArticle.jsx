@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import Comments from "./Comments";
+import {Comments, ChangeVotes} from "./index"
 
 function SingleArticle() {
 

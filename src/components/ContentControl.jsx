@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import { AllArticles, SingleArticle, ErrorPage, AllTopics, Comments } from "./index";
+import { AllArticles, SingleArticle, ErrorPage, AllTopics } from "./index";
 
 function ContentControl() {
   return (

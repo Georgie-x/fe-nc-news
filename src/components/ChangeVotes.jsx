@@ -1,13 +1,17 @@
+import axios from "axios";
+import { useEffect, useState } from "react";
+
 function ChangeVotes({article}) {
   const [voteDiff, setVoteDiff] = useState(0);
 
 const updatedVote = () => {
     return votes + voteDiff
 }
+console.log(updatedVote)
 
   useEffect(() => {
     axios
-      .patch(`https://georgiex-news.onrender.com/api/articles/${article_id},{()=>{
+      .patch(`https://georgiex-news.onrender.com/api/articles/${article.article_id},{()=>{${article.votes}:${updatedVote}
       }}`)
       .then(({ data }) => {
       });
@@ -37,3 +41,5 @@ const updatedVote = () => {
     </>
   );
 }
+
+export default ChangeVotes
