@@ -35,7 +35,11 @@ function Comments() {
               </h3>
               <p>{comments.body}</p>
               <br/>
-              
+              <div className="flex-across">
+                <button>Downvote!</button>{" "}
+                <p className="highlight">Votes: {comments.votes}</p>{" "}
+                <button>Upvote!</button>
+              </div>
               <hr></hr>
             </li>
           );
