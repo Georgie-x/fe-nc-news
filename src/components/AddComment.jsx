@@ -1,21 +1,18 @@
 import axios from "axios";
 import { useState } from "react";
 
-function AddComment({ setComments, article_id }) {
+function AddComment({ article_id }) {
   const [newComment, setNewComment] = useState("");
+  const [postedComment, setPostedComment] = useState("")
 
   function submitHandler(e) {
     e.preventDefault();
-
-    setComments((previousComments) => {
-      return [newComment, ...previousComments];
-    });
-
     const itemForPost = {
-      username: "rogersop",
+      username: "jessjelly",
       body: newComment,
     };
-
+    setPostedComment(newComment)
+console.log(itemForPost, newComment)
     axios.post(`https://georgiex-news.onrender.com/api/articles/${article_id}/comments`, itemForPost)
       .then()
       .catch((err)=>console.log(err));
@@ -23,7 +20,7 @@ function AddComment({ setComments, article_id }) {
 
   return (
     <>
-      <form onSubmit={submitHandler}>
+    {postedComment === "" ? <form onSubmit={submitHandler}>
         <label htmlFor="comment-field">
           <h3>Add New Comment</h3>
         </label>
@@ -39,9 +36,11 @@ function AddComment({ setComments, article_id }) {
         <button id="comment-submit" name="comment-submit" type="submit">
           Submit
         </button>
-
         <hr></hr>
-      </form>
+      </form> : <><h3>Your comment:</h3>
+      <p>{postedComment}</p>
+      <hr></hr></>} 
+      
     </>
   );
 }

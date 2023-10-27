@@ -7,6 +7,7 @@ function ContentControl() {
       <div>
         <Routes>
         <Route path="/" element={<AllArticles />} />
+        <Route path="/home" element={<AllArticles />} />
           <Route path="/articles" element={<AllArticles />} />
           <Route path="/articles/:article_id/*" element={<SingleArticle />} />
           <Route path="/topics" element={<AllTopics />} />

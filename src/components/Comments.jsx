@@ -9,6 +9,7 @@ function Comments() {
   const [isLoading, setIsLoading] = useState(true);
   const [comments, setComments] = useState([]);
 
+
   useEffect(() => {
     axios
       .get(
@@ -25,7 +26,7 @@ function Comments() {
   return (
     <>
       <p>{isLoading ? "loading..." : null}</p>
-      <AddComment setComments={setComments} article_id={article_id} />
+      <AddComment article_id={article_id} />
       <p>{comments.comment_id}</p>
       <ul>
         {comments.map((comments) => {
