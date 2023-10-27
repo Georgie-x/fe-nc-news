@@ -1,11 +1,14 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import AddComment from "./AddComment";
+
 
 function Comments() {
   const { article_id } = useParams();
   const [isLoading, setIsLoading] = useState(true);
   const [comments, setComments] = useState([]);
+
 
   useEffect(() => {
     axios
@@ -23,7 +26,7 @@ function Comments() {
   return (
     <>
       <p>{isLoading ? "loading..." : null}</p>
-
+      <AddComment article_id={article_id} />
       <p>{comments.comment_id}</p>
       <ul>
         {comments.map((comments) => {

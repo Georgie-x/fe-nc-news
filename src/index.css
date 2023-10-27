@@ -20,13 +20,6 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-
-
-  
-}
-
-main{
-  background-color: hsl(211, 80%, 10%);
 }
 
 footer {
@@ -52,11 +45,11 @@ h1 {
   margin: 5px 0;
 }
 h2 {
-  padding: 0 10px;
+  padding: 0 50px;
   color: hsl(211, 66%, 66%);
 }
 h3{
-  padding: 0 10px;
+  padding: 0 50px;
   color: hsl(211, 66%, 66%); 
 }
 
@@ -98,7 +91,7 @@ details summary {
   height: 4em;
 }
 .large-img {
-  height: 8em;
+  height: 6em;
 }
 
 .skip-to-main-content-link {
@@ -119,6 +112,17 @@ details summary {
 .highlight{
   font-weight: 900;
   color: hsl(31, 70%, 70%);
+}
+
+#comment-field{
+  width: 80%;
+  margin: 0 50px;
+}
+
+#comment-submit{
+  height: 3em;
+  width: 8em;
+ margin-left: 50px;
 }
 
 /* 
