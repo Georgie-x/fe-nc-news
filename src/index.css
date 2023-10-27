@@ -20,13 +20,6 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-
-
-  
-}
-
-main{
-  background-color: hsl(211, 80%, 10%);
 }
 
 footer {
@@ -124,6 +117,13 @@ details summary {
 #comment-field{
   width: 80%;
   margin: 0 50px;
+}
+
+#comment-submit{
+  height: 3em;
+  width: 8em;
+ margin-left: 50px;
+
 }
 
 /* 

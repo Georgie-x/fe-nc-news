@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Comments, ChangeVotes, AddComment } from "./index";
+import { Comments, ChangeVotes } from "./index";
 
 function SingleArticle() {
   const { article_id } = useParams();
@@ -37,7 +37,7 @@ function SingleArticle() {
         }}
       >
         <summary>See Comments</summary>
-        <AddComment />
+        
         <Comments />
       </details>
       <br />
