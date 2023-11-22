@@ -5,7 +5,7 @@ function Header() {
     <header>
       <h1>Northcoders News</h1>
       <nav>
-        <ul className="flex-across">
+        <ul className="across">
           <li><Link to="/home">Home</Link></li>
           <li><Link to="/articles">Latest Articles</Link></li>
           <li><Link to="/articles/">Article search</Link></li>

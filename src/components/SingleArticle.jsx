@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import {Comments, ChangeVotes} from "./index"
+import {Comments, ChangeVotes, AddComment} from "./index"
 
 function SingleArticle() {
 
@@ -36,6 +36,7 @@ function SingleArticle() {
       
       <details open={isOpen} onChange={()=> {setIsOpen(true)}}>
         <summary>See Comments</summary>
+        <AddComment />
         <Comments />
       </details>
 

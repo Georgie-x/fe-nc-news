@@ -4,7 +4,7 @@ import { AllArticles, SingleArticle, ErrorPage, AllTopics } from "./index";
 function ContentControl() {
   return (
     <main>
-      <div>
+      <div className="main-container">
         <Routes>
         <Route path="/" element={<AllArticles />} />
           <Route path="/articles" element={<AllArticles />} />

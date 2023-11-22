@@ -30,7 +30,7 @@ function Comments() {
           return (
             <li className="all-comments" key={comments.comment_id}>
               <h3>
-                Comment#{comments.comment_id} created by {comments.author} at{" "}
+                Comment#{comments.comment_id} created by {comments.author} at
                 {comments.created_at}
               </h3>
               <p>{comments.body}</p>
