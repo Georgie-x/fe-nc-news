@@ -1,4 +1,4 @@
-import { AccessLink, Header, ContentControl, Footer } from "./components"
+import { AccessLink, Header, ContentControl, Footer } from "./layout-components"
 
 function App() {
 	return (
