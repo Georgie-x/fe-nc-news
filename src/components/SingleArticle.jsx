@@ -15,20 +15,19 @@ function SingleArticle() {
       .get(`https://georgiex-news.onrender.com/api/articles/${article_id}`)
       .then(({ data }) => {
         const article = data.article;
+        console.log(article)
         setArticle(article);
         setIsLoading(false);
       });
   }, []);
 
-  return (
-    <>
+  return isLoading ? (
+		<h3>loading...</h3>
+	) : (
+		<>
       <h2> {article.title}</h2>
-      <p>{isLoading ? "loading..." : null}</p>
-      <p>Article #{article_id}</p>
-      <p>Author: {article.author}</p>
-      <p>Topic: {article.topic} </p>
-      <p>{article.created_at}</p>
-      <img className="large.img" src={article.article_img_url} />
+      <p>Article #{article_id} | Author: {article.author} | Topic: {article.topic} | {article.created_at}</p>
+      <img className="large-img" src={article.article_img_url} />
       <p>{article.body}</p>
       <ChangeVotes article={article} setArticle={setArticle}/>
 
@@ -39,9 +38,6 @@ function SingleArticle() {
         <AddComment />
         <Comments />
       </details>
-
-      <br />
-      <hr></hr>
     
     </>
   );

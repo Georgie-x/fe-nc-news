@@ -8,20 +8,18 @@
   color: hsl(211, 0%, 90%);
   background-color: hsl(211, 80%, 10%);
 }
-body, ul{
+body, ul, p{
   margin: 0px; 
   padding: 0px; 
 }
 .page-container{
   display: flex;
   flex-direction: column;
-  padding-top: 100px;
-  padding-bottom: 60px;
+ 
+  min-height: 90vh;
   width: 100%;
   max-width:1000px;
-  text-align: center;
-  
-   
+  text-align: center; 
 }
 
 header {
@@ -32,12 +30,20 @@ header {
   z-index: 1;
 
 }
-main{
-  
+.main-container{
+  display: flex;
   margin: 0 auto;
-  padding: 0 auto;
+  padding-top: 120px;
+  padding-bottom: 60px;
+  max-width:800px;
+  flex-direction: column;
+  align-items: center;
+  background-color: hsl(211, 100%, 6%);
+  
+   
+}
+main{
   width: 100vw;
-  background-color: hsl(211, 80%, 10%);
   
 }
 
@@ -46,10 +52,12 @@ footer {
   bottom: 0;
   background-color: hsl(211, 80%, 20%);
   width: 100%;
+  border-top: 2px solid hsl(221, 100%, 80%);
 
 }
 hr{
   width: 60%;
+
 }
 a {
   font-weight: 500;
@@ -60,24 +68,28 @@ a:hover {
   color: hsl(31, 70%, 70%);
 }
 
+h1, h2, h3, p{
+  padding: 0 2em;
+}
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
   margin: 5px 0;
 }
 h2 {
-  padding: 0 10px;
   color: hsl(211, 66%, 66%);
 }
 h3{
-  padding: 0 10px;
   color: hsl(211, 66%, 66%); 
 }
 
 ul {
   list-style: none;
-  padding: 0px;
+  padding: 0.5em;
 }
+
+
 
 .across li{
   display: inline-block;
@@ -108,11 +120,15 @@ details summary {
   cursor: pointer;
 }
 
+img{
+  border: 1px solid hsl(211, 66%, 66%);
+}
+
 .small-img {
-  height: 4em;
+  height: 5em;
 }
 .large-img {
-  height: 8em;
+  max-height: 50em;
 }
 
 .skip-to-main-content-link {

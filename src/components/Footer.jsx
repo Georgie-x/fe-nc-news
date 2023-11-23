@@ -4,11 +4,16 @@ function Footer() {
 			<ul className="across">
 				<li>
 					<p>
-						<a href='#header'>Back to Top</a>
+						<a href="mailto:georgiex@gmail.com">Gmail: Georgiex</a>
 					</p>
 				</li>
 				<li>
-					<p>Georgie 2023</p>
+					<p>Georgina Rimmer NC News 2023</p>
+				</li>
+				<li>
+					<p>
+						<a href="https://github.com/Georgie-x">GitHub: Georgie-x</a>
+					</p>
 				</li>
 			</ul>
 		</footer>

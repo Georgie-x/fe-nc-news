@@ -34,8 +34,8 @@ function ChangeVotes({ article, setArticle }) {
 
   return (
     <>
-      <div className="flex-across">
-        <button
+      <ul className="across">
+        <li><button
           disabled={voteWay==="down"}
           onClick={() => {
             voteDiff = -1;
@@ -43,9 +43,9 @@ function ChangeVotes({ article, setArticle }) {
           }}
         >
           Downvote!
-        </button>
-        <p className="highlight">{`Votes: ${article.votes}`}</p>
-        <button
+        </button></li>
+        <li><p className="highlight">{`Votes: ${article.votes}`}</p></li>
+        <li><button
        disabled={voteWay==="up"}
           onClick={() => {
             voteDiff = 1;
@@ -53,8 +53,8 @@ function ChangeVotes({ article, setArticle }) {
           }}
         >
           Upvote!
-        </button>
-      </div>
+        </button></li>
+      </ul>
     </>
   );
 }
