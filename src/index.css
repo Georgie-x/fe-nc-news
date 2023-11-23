@@ -5,8 +5,9 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  color: hsl(211, 0%, 90%);
+  color: hsl(221, 60%, 80%);
   background-color: hsl(211, 80%, 10%);
+  overflow-x: hidden;
 }
 body, ul, p{
   margin: 0px; 
@@ -28,6 +29,7 @@ header {
   top:0;
   width: 100%;
   z-index: 1;
+  border-bottom: 2px solid hsl(211, 66%, 66%);
 
 }
 .main-container{
@@ -39,6 +41,8 @@ header {
   flex-direction: column;
   align-items: center;
   background-color: hsl(211, 100%, 6%);
+  gap: 1em;
+  overflow:visible;
   
    
 }
@@ -52,16 +56,17 @@ footer {
   bottom: 0;
   background-color: hsl(211, 80%, 20%);
   width: 100%;
-  border-top: 2px solid hsl(221, 100%, 80%);
+  border-top: 2px solid hsl(211, 66%, 66%);
 
 }
 hr{
   width: 60%;
 
+
 }
 a {
   font-weight: 500;
-  color: hsl(221, 100%, 80%);
+  color: hsl(211, 66%, 66%);
   text-decoration: inherit;
 }
 a:hover {
@@ -69,7 +74,7 @@ a:hover {
 }
 
 h1, h2, h3, p{
-  padding: 0 2em;
+  padding: 0 1em;
 }
 
 h1 {
@@ -97,12 +102,34 @@ ul {
  
 }
 
+label{
+  display: block;
+}
+
+.input{
+  height: 3em;
+  border-radius: 8px;
+  border: 2px solid hsl(211, 66%, 66%);
+  color: hsl(221, 60%, 80%);
+  background-color: hsl(211, 80%, 10%);
+
+  
+}
+
+#comment-input{
+  width: 80%;
+}
+#username-input{
+  width: 20%;
+}
 
 
 button {
   display: inline-block;
+  padding: 0 1em;
+  height: 3em;
   border-radius: 8px;
-  border: 1px solid hsl(211, 66%, 66%);
+  border: 2px solid hsl(211, 66%, 66%);
   background-color: hsl(211, 80%, 10%);
   color: hsl(31, 70%, 70%);
   cursor: pointer;
@@ -114,6 +141,9 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+details{
+  overflow:visible;
 }
 
 details summary {
@@ -128,7 +158,7 @@ img{
   height: 5em;
 }
 .large-img {
-  max-height: 50em;
+  height: 20em;
 }
 
 .skip-to-main-content-link {

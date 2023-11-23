@@ -35,6 +35,7 @@ function SingleArticle() {
       
       <details open={isOpen} onChange={()=> {setIsOpen(true)}}>
         <summary>See Comments</summary>
+        <br />
         <AddComment />
         <Comments />
       </details>
