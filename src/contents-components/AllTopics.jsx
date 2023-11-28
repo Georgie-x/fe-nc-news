@@ -24,9 +24,9 @@ function AllTopics() {
 				{topics.map((topic) => {
 					return (
 						<li key={topic.slug}>
-							<h2>
+							<h3>
 								<Link to={`/topics/${topic.slug}`}>{topic.slug}</Link>
-							</h2>
+							</h3>
 							<p>{topic.description}</p>
 						</li>
 					)

@@ -21,7 +21,7 @@ function AllArticles() {
 		<h3>loading...</h3>
 	) : (
 		<>
-			<ul className='across'>
+			<ul>
 				<li>
 					<form>
 						<label htmlFor='sortby-input'><h2>Articles sorted by:  </h2></label>
@@ -40,9 +40,9 @@ function AllArticles() {
 					return (
 						<li className='sorted-articles' key={article.article_id}>
 							<img className='small-img' src={article.article_img_url} />
-							<h2>
+							<h3>
 								<Link to={`/articles/${article.article_id}`}>{article.title}</Link>
-							</h2>
+							</h3>
 							<p>
 								Article #{article.article_id} created by {article.author} at{" "}
 								{article.formatted_created_at}

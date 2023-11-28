@@ -25,9 +25,9 @@ function ArticlesByTopic() {
 					return (
 						<li className='all-articles' key={article.article_id}>
 							<img className='small-img' src={article.article_img_url} />
-							<h2>
+							<h3>
 								<Link to={`/articles/${article.article_id}`}>{article.title}</Link>
-							</h2>
+							</h3>
 							<p>
 								Article #{article.article_id} created by {article.author} at {article.formatted_created_at}
 							</p>
