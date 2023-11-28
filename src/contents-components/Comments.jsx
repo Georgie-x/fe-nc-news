@@ -1,11 +1,13 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
+import { DeleteComment, CommentVotes } from "./index"
 
 function Comments() {
 	const { article_id } = useParams()
 	const [isLoading, setIsLoading] = useState(true)
 	const [comments, setComments] = useState([])
+	const user = "jessjelly"
 
 	useEffect(() => {
 		axios
@@ -30,6 +32,11 @@ function Comments() {
 								Comment#{comments.comment_id} created by {comments.author} at {comments.created_at}
 							</h3>
 							<p>{comments.body}</p>
+							{comments.author === user ? (
+								<DeleteComment comment_id={comments.comment_id}/>
+							) : (
+								<CommentVotes comment_id={comments.comment_id} votes={comments.votes} />
+							)}
 							<hr></hr>
 						</li>
 					)

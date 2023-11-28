@@ -7,9 +7,9 @@ function Header() {
       <nav>
         <ul className="across">
           <li><Link to="/home">Home</Link></li>
-          <li><Link to="/articles">Latest Articles</Link></li>
-          <li><Link to="/articles/">Article search</Link></li>
+          <li><Link to="/articles">Browse Articles</Link></li>
           <li><Link to="/topics">Topics</Link></li>
+          <li>Sign In</li>
         </ul>
       </nav>
     </header>

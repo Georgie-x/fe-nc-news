@@ -8,7 +8,7 @@ function Footer() {
 					</p>
 				</li>
 				<li>
-					<p>Georgina Rimmer NC News 2023</p>
+					<p>Georgina Rimmer 2023</p>
 				</li>
 				<li>
 					<p>

@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom"
-import { AllArticles, SingleArticle, ErrorPage, AllTopics } from "../contents-components"
+import { AllArticles, SingleArticle, ErrorPage, AllTopics, ArticlesByTopic } from "../contents-components"
+
 
 function ContentControl() {
 	return (
@@ -10,6 +11,7 @@ function ContentControl() {
 					<Route path='/articles' element={<AllArticles />} />
 					<Route path='/articles/:article_id/*' element={<SingleArticle />} />
 					<Route path='/topics' element={<AllTopics />} />
+					<Route path='/topics/:topic' element={<ArticlesByTopic />} />
 					<Route path='/*' element={<ErrorPage />} />
 				</Routes>
 			</div>

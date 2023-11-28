@@ -5,6 +5,9 @@ import AllTopics from "./AllTopics"
 import Comments from "./Comments"
 import ChangeVotes from "./ChangeVotes"
 import AddComment from "./AddComment"
+import ArticlesByTopic from "./ArticlesByTopic"
+import DeleteComment from "./DeleteComment"
+import CommentVotes from "./CommentVotes"
 
 export {
 	AllArticles,
@@ -14,4 +17,7 @@ export {
 	Comments,
 	ChangeVotes,
 	AddComment,
+	ArticlesByTopic,
+	DeleteComment,
+	CommentVotes
 }

@@ -23,12 +23,12 @@ function AllTopics() {
 			<ul id='topic'>
 				{topics.map((topic) => {
 					return (
-						<><li key={topic.slug}>
+						<li key={topic.slug}>
 							<h2>
-								<Link to={`/topics/${topic}`}>{topic.slug}</Link>
+								<Link to={`/topics/${topic.slug}`}>{topic.slug}</Link>
 							</h2>
 							<p>{topic.description}</p>
-						</li></>
+						</li>
 					)
 				})}
 			</ul>
