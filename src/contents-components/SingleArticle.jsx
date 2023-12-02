@@ -24,7 +24,7 @@ function SingleArticle() {
 			<h2> {article.title}</h2>
 			<p>
 				Article #{article_id} | Author: {article.author} | Topic: {article.topic} |{" "}
-				{article.created_at}
+				{article.formatted_created_at}
 			</p>
 			<img className='large-img' src={article.article_img_url} />
 			<p>{article.body}</p>

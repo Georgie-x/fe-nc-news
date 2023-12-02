@@ -8,6 +8,7 @@ import AddComment from "./AddComment"
 import ArticlesByTopic from "./ArticlesByTopic"
 import DeleteComment from "./DeleteComment"
 import CommentVotes from "./CommentVotes"
+import HomePage from "./HomePage"
 
 export {
 	AllArticles,
@@ -19,5 +20,6 @@ export {
 	AddComment,
 	ArticlesByTopic,
 	DeleteComment,
-	CommentVotes
+	CommentVotes,
+	HomePage
 }

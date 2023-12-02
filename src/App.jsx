@@ -4,11 +4,9 @@ function App() {
 	return (
 		<>
 			<AccessLink />
-			<div className='page-container'>
-				<Header />
-				<ContentControl />
-				<Footer />
-			</div>
+			<Header />
+			<ContentControl />
+			<Footer />
 		</>
 	)
 }
