@@ -1,16 +1,11 @@
-body,
-h1,
-p,
-ul {
-	margin: 0;
-}
+
 :root {
 	--background-body: repeating-conic-gradient(
 		hsl(211, 100%, 6%) 0%,
 		hsl(211, 80%, 12%) 5%,
 		hsl(211, 100%, 6%) 10%
 	);
-	--background-body-alt:repeating-conic-gradient(
+	--background-body-alt: repeating-conic-gradient(
 		hsl(211, 80%, 12%) 0%,
 		hsl(211, 100%, 6%) 5%,
 		hsl(211, 80%, 12%) 10%
@@ -25,167 +20,27 @@ ul {
 	color: var(--text);
 	background: var(--background-body);
 	overflow-x: hidden;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font: inherit;
+}
+
+/* https://andy-bell.co.uk/a-more-modern-css-reset */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
 	box-sizing: border-box;
-	display: grid;
-	grid-template-rows: auto 1fr auto;
-	text-align: center;
 }
 
-header {
-	grid-row: 1;
-	background-color: var(--background-banner);
-	position: sticky;
-	width: 100vw;
-	top: 0;
-	z-index: 2;
-	border-bottom: 2px solid var(--border);
-}
-
-main {
-	grid-row: 2;
-	display: flex;
-	flex-wrap: wrap;
-	align-items: stretch;
-	justify-content: center;
-	margin: 0 auto;
-	max-width: 1100px;
-	min-height: 80vh;
-	background-color: var(--background-main);
-	gap: 3em;
-	overflow: visible;
-	flex-grow: 1;
-	& > :first-child {
-		flex-basis: 100%;
-	}
-}
-
-footer {
-	grid-row: 3;
-	background-color: var(--background-banner);
-	border-top: 2px solid var(--border);
-	width: 100vw;
-}
-
-a {
-	font-weight: 500;
-	color: var(--border);
-	text-decoration: inherit;
-}
-a:hover {
-	color: var(--highlight);
-}
-
-h1 {
-	font-size: 3em;
-	text-align: center;
-}
-h2 {
-	font-size: 2em;
-	padding: 0.4em 0.4em 0.2em;
-	color: var(--border);
-}
-
-h3 {
-	font-size: 1.5em;
-	color: var(--border);
-}
-
-ul {
-	list-style: none;
-	padding: 0.5em;
-}
-.across {
-	display: flex;
-	gap: 2em;
-	justify-content: center;
-}
-.across li,
-label {
-	display: inline-block;
-}
-
-.container {
-	container-type: inline-size;
-	border-radius: 8px;
-	border: 2px solid var(--border);
-	width: clamp(20%, 400px, 80%);
-	padding: 2em;
-	position: relative;
-	overflow: hidden;
-	
-  }
-
-  
-  .container:hover{
-	background: var(--background-body-alt);
-	box-shadow: 0 0 20px var(--border);
-	border-color: var(--border-highlight);
-  }
-
-
-
-
-select {
-	color: var(--border);
-	font-size: 1.5em;
-	font-weight: bold;
-	background-color: var(--background-main);
-	border-radius: 8px;
-	border: 2px solid var(--border-highlight);
-}
-
-.input {
-	height: 3em;
-	border-radius: 8px;
-	border: 2px solid var(--border);
-	color: var(--text);
-	background-color: var(--background-main);
-}
-#topic li {
-	border: 2px solid var(--border);
-	padding: 1em;
-	margin-bottom: 2em;
-	border-radius: 8px;
-}
-
-#comment-input {
-	width: 80%;
-}
-#username-input {
-	width: 20%;
-}
-
-button {
-	display: inline-block;
-	padding: 0 1em;
-	height: 3em;
-	border-radius: 8px;
-	border: 2px solid var(--border);
-	background-color: var(--background-body);
-	color: var(--highlight);
-	cursor: pointer;
-	transition: border-color 0.25s;
-}
-button:hover {
-	border-color: var(--border-highlight);
-}
-button:focus,
-button:focus-visible {
-	outline: 4px auto purple;
-}
-details {
-	overflow: visible;
-}
-
-details summary {
-	cursor: pointer;
-}
-
-img {
-	border: 1px solid var(--border);
-	aspect-ratio: 16/10;
-	width: clamp(100px, 100%, 500px);
-	border-radius: 4px;
+/* Prevent font size inflation */
+html {
+	-moz-text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+	text-size-adjust: none;
 }
 
 .skip-to-main-content-link {
@@ -203,7 +58,210 @@ img {
 	opacity: 1;
 }
 
-.highlight {
-	font-weight: 900;
+.layout-container {
+	display: grid;
+	container-type: inline-size;
+	grid-template-rows: auto 1fr auto;
+	grid-template-columns: auto 100% auto;
+	grid-template-areas:
+		"header header header"
+		". main ."
+		"footer footer footer";
+	text-align: center;
+	min-height: 100vh;
+		
+}
+
+@container (min-width:600px){
+	.layout-container {
+		grid-template-columns: auto minmax(30px 1170px) auto;
+}}
+
+
+header {
+	grid-area: header;
+	background-color: var(--background-banner);
+	position: sticky;
+	top: 0;
+	z-index: 2;
+	border-bottom: 2px solid var(--border);
+}
+
+main {
+	grid-area: main;
+	background-color: var(--background-main);
+}
+
+footer {
+	grid-area: footer;
+	background-color: var(--background-banner);
+	border-top: 2px solid var(--border);
+}
+h1 {
+	font-size: 3em;
+	text-align: center;
+}
+h2 {
+	font-size: 2em;
+	padding: 0.4em 0.4em 0.2em;
+	color: var(--border);
+}
+h3 {
+	font-size: 1.5em;
+	padding: 0.4em 0.4em 0.2em;
+	color: var(--border);
+}
+ul {
+	list-style: none;
+	padding: 0.5em;
+}
+
+a {
+	font-weight: 500;
+	color: var(--border);
+	text-decoration: none;
+}
+a:hover {
 	color: var(--highlight);
+}
+.across {
+	display: flex;
+	gap: 2em;
+	justify-content: center;
+}
+.across > * {
+	display: inline-block;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: clamp(100px, 500px, 80%);
+	margin: 2em auto;
+	padding: 1em;
+	gap: 1em;
+	background: var(--background-body);
+	border-radius: 8px;
+	border: 2px solid var(--border);
+	position: relative;
+	overflow: hidden;
+
+}
+
+.container:hover {
+	box-shadow: 0 0 30px var(--border-highlight);
+	border-color: var(--border-highlight);
+}
+
+select {
+	color: var(--border);
+	background-color: var(--background-main);
+	border-radius: 8px;
+	border: 2px solid var(--border-highlight);
+}
+
+button {
+	display: inline-block;
+	padding: 0 1em;
+	height: 3em;
+	border-radius: 8px;
+	border: 2px solid var(--border);
+	background-color: var(--background-main);
+	color: var(--highlight);
+	cursor: pointer;
+	transition: border-color 0.25s;
+}
+button:hover {
+	border-color: var(--border-highlight);
+}
+button:focus,
+button:focus-visible {
+	outline: 4px auto purple;
+}
+details {
+	overflow: visible;
+}
+details summary {
+	cursor: pointer;
+}
+img {
+	border: 1px solid var(--border);
+	aspect-ratio: 16/10;
+	width: clamp(10px, 400px, 80%);
+	border-radius: 4px;
+	margin: 0 auto;
+}
+
+.input {
+	height: 3em;
+	border-radius: 8px;
+	border: 2px solid var(--border);
+	color: var(--text);
+	background-color: var(--background-main);
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+	list-style: none;
+}
+
+/* Set core body defaults */
+body {
+	min-height: 100vh;
+	line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+	line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+	display: block;
+	font-weight: bold;
+	text-wrap:pretty;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+	color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+	max-width: 100%;
+	display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+	min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+	scroll-margin-block: 5ex;
 }

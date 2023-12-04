@@ -20,14 +20,16 @@ function AllTopics() {
 	) : (
 		<>
 			<h2>Article Topics</h2>
-			<ul id='topic'>
+			<ul>
 				{topics.map((topic) => {
 					return (
 						<li key={topic.slug}>
+							<div className="container">
 							<h3>
 								<Link to={`/topics/${topic.slug}`}>{topic.slug}</Link>
 							</h3>
 							<p>{topic.description}</p>
+							</div>
 						</li>
 					)
 				})}

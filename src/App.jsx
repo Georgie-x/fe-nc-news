@@ -4,9 +4,11 @@ function App() {
 	return (
 		<>
 			<AccessLink />
-			<Header />
-			<ContentControl />
-			<Footer />
+			<div className='layout-container'>
+				<Header />
+				<ContentControl />
+				<Footer />
+			</div>
 		</>
 	)
 }

@@ -37,22 +37,20 @@ function AllArticles() {
 
 			{articles.map((article) => {
 				return (
-					<ul className='container'>
-						<li className='sorted-articles' key={article.article_id}>
-							<Link to={`/articles/${article.article_id}`}>
-								<h3>{article.title}</h3>
-								<img src={article.article_img_url} />
-								<h3>
-									Comments {article.comment_count} Votes {article.votes}
-								</h3>
+					<div className='container' key={article.article_id}>
+						<h3>{article.title}</h3>
+						<Link to={`/articles/${article.article_id}`}>
+							<img src={article.article_img_url} />
+						</Link>
+						<h3>
+							Comments {article.comment_count} Votes {article.votes}
+						</h3>
 
-								<p>
-									Article #{article.article_id} created by {article.author} at{" "}
-									{article.formatted_created_at}
-								</p>
-							</Link>
-						</li>
-					</ul>
+						<p>
+							Article #{article.article_id} created by {article.author} at{" "}
+							{article.formatted_created_at}
+						</p>
+					</div>
 				)
 			})}
 		</>
