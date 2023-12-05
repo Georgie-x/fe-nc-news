@@ -1,24 +1,26 @@
-
 :root {
-	--background-body: repeating-conic-gradient(
-		hsl(211, 100%, 6%) 0%,
-		hsl(211, 80%, 12%) 5%,
-		hsl(211, 100%, 6%) 10%
-	);
-	--background-body-alt: repeating-conic-gradient(
-		hsl(211, 80%, 12%) 0%,
-		hsl(211, 100%, 6%) 5%,
-		hsl(211, 80%, 12%) 10%
-	);
+	--background-body: hsl(211, 80%, 12%);
 	--background-main: hsl(211, 100%, 6%);
 	--background-banner: hsl(211, 80%, 20%);
 	--border: hsl(211, 66%, 66%);
 	--highlight: hsl(31, 70%, 70%);
 	--border-highlight: hsl(241, 100%, 70%);
 	--text: hsl(221, 60%, 80%);
+
+	--background-gradient: repeating-conic-gradient(
+		var(--background-main) 0%,
+		var(--background-body) 5%,
+		var(--background-main) 10%
+	);
+	--background-gradient-alt: repeating-conic-gradient(
+		var(--background-body) 0%,
+		var(--background-main) 5%,
+		var(--background-body) 10%
+	);
+
 	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 	color: var(--text);
-	background: var(--background-body);
+	background: var(--background-gradient);
 	overflow-x: hidden;
 }
 
@@ -62,21 +64,20 @@ html {
 	display: grid;
 	container-type: inline-size;
 	grid-template-rows: auto 1fr auto;
-	grid-template-columns: auto 100% auto;
+	grid-template-columns: auto 50% auto;
 	grid-template-areas:
 		"header header header"
 		". main ."
 		"footer footer footer";
 	text-align: center;
 	min-height: 100vh;
-		
 }
 
-@container (min-width:600px){
+@container (min-width:700px) {
 	.layout-container {
-		grid-template-columns: auto minmax(30px 1170px) auto;
-}}
-
+		grid-template-columns: auto 600px auto;
+	}
+}
 
 header {
 	grid-area: header;
@@ -100,10 +101,11 @@ footer {
 h1 {
 	font-size: 3em;
 	text-align: center;
+	padding: 0.4em 0.4em 0.1em;
 }
 h2 {
-	font-size: 2em;
-	padding: 0.4em 0.4em 0.2em;
+	font-size: 1.8em;
+	padding: 0.9em 0.4em 0.2em;
 	color: var(--border);
 }
 h3 {
@@ -113,7 +115,7 @@ h3 {
 }
 ul {
 	list-style: none;
-	padding: 0.5em;
+	padding: 0.4em;
 }
 
 a {
@@ -142,12 +144,11 @@ a:hover {
 	margin: 2em auto;
 	padding: 1em;
 	gap: 1em;
-	background: var(--background-body);
+	background: var(--background-gradient);
 	border-radius: 8px;
 	border: 2px solid var(--border);
 	position: relative;
 	overflow: hidden;
-
 }
 
 .container:hover {
@@ -194,6 +195,10 @@ img {
 	margin: 0 auto;
 }
 
+#user{
+	aspect-ratio: 1/1;
+}
+
 .input {
 	height: 3em;
 	border-radius: 8px;
@@ -232,7 +237,7 @@ h3,
 h4 {
 	display: block;
 	font-weight: bold;
-	text-wrap:pretty;
+	text-wrap: pretty;
 }
 
 /* A elements that don't have a class get default styles */

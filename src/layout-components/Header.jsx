@@ -10,7 +10,7 @@ function Header() {
           <li><Link to="/articles">Articles</Link></li>
           <li><Link to="/topics">Topics</Link></li>
           <li><Link to="/users/:username">Sign In</Link></li>
-          <li><Link to="/users/:username">Sign In</Link></li>
+          <li><Link to="/users/:username">Theme</Link></li>
         </ul>
       </nav>
     </header>

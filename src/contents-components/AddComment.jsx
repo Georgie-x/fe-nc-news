@@ -51,7 +51,6 @@ function AddComment() {
 					}}
 				></input>
 				<br />
-				<br />
 				<button type='submit' id='comment-submit' disabled={isPosting === true}>
 					Add Comment
 				</button>
