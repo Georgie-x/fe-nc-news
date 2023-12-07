@@ -22,17 +22,19 @@ function AllArticles() {
 	) : (
 		<>
 			<form>
-				<label htmlFor='sortby-input'>
-					<h2>Articles sorted by </h2>
-				</label>
-				<select value={sortby} id='sortby-input' onChange={(e) => setSortby(e.target.value)}>
-					<option value='formatted_created_at&order=DESC'>Latest</option>
-					<option value='formatted_created_at&order=ASC'>Oldest</option>
-					<option value='votes&order=DESC'>Most Votes</option>
-					<option value='votes&order=ASC'>Least Votes</option>
-					<option value='comment_count&order=DESC'>Most Comments</option>
-					<option value='comment_count&order=ASC'>Least Comments</option>
-				</select>
+				<div className='across'>
+					<label htmlFor='sortby-input'>
+						<h2>Articles sorted by </h2>
+					</label>
+					<select value={sortby} id='sortby-input' onChange={(e) => setSortby(e.target.value)}>
+						<option value='formatted_created_at&order=DESC'>Latest</option>
+						<option value='formatted_created_at&order=ASC'>Oldest</option>
+						<option value='votes&order=DESC'>Most Votes</option>
+						<option value='votes&order=ASC'>Least Votes</option>
+						<option value='comment_count&order=DESC'>Most Comments</option>
+						<option value='comment_count&order=ASC'>Least Comments</option>
+					</select>
+				</div>
 			</form>
 
 			{articles.map((article) => {

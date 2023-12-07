@@ -21,21 +21,24 @@ function ArticlesByTopic() {
 		<>
 			<h2>{topic} articles</h2>
 			<ul>
-				{articles.map((article) => {
-					return (
-						<li className='all-articles' key={article.article_id}>
-							<img className='small-img' src={article.article_img_url} />
-							<h3>
-								<Link to={`/articles/${article.article_id}`}>{article.title}</Link>
-							</h3>
-							<p>
-								Article #{article.article_id} created by {article.author} at {article.formatted_created_at}
-							</p>
+			{articles.map((article) => {
+				return (
+					<div className='container' key={article.article_id}>
+						<h3>{article.title}</h3>
+						<Link to={`/articles/${article.article_id}`}>
+							<img src={article.article_img_url} />
+						</Link>
+						<h3>
+							Comments {article.comment_count} Votes {article.votes}
+						</h3>
 
-							<hr></hr>
-						</li>
-					)
-				})}
+						<p>
+							Article #{article.article_id} created by {article.author} at{" "}
+							{article.formatted_created_at}
+						</p>
+					</div>
+				)
+			})}
 			</ul>
 		</>
 	)

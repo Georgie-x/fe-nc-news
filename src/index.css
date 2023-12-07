@@ -62,9 +62,8 @@ html {
 
 .layout-container {
 	display: grid;
-	container-type: inline-size;
 	grid-template-rows: auto 1fr auto;
-	grid-template-columns: auto 50% auto;
+	grid-template-columns: auto 600px auto;
 	grid-template-areas:
 		"header header header"
 		". main ."
@@ -73,10 +72,9 @@ html {
 	min-height: 100vh;
 }
 
-@container (min-width:700px) {
-	.layout-container {
-		grid-template-columns: auto 600px auto;
-	}
+@media (min-width: 700px) {
+    .layout-container {
+        grid-template-columns: auto 1100px auto;}
 }
 
 header {
@@ -118,6 +116,7 @@ ul {
 	padding: 0.4em;
 }
 
+
 a {
 	font-weight: 500;
 	color: var(--border);
@@ -130,6 +129,7 @@ a:hover {
 	display: flex;
 	gap: 2em;
 	justify-content: center;
+	align-items:baseline;
 }
 .across > * {
 	display: inline-block;
@@ -156,7 +156,18 @@ a:hover {
 	border-color: var(--border-highlight);
 }
 
+.form-container{
+	display:flex;
+	flex-direction: column;
+	gap: 1em;
+	padding: 1em 1em 4em 1em;
+
+	
+}
+
+
 select {
+	max-height:3em;
 	color: var(--border);
 	background-color: var(--background-main);
 	border-radius: 8px;
@@ -197,6 +208,7 @@ img {
 
 #user{
 	aspect-ratio: 1/1;
+	width: 20em;
 }
 
 .input {
@@ -205,6 +217,7 @@ img {
 	border: 2px solid var(--border);
 	color: var(--text);
 	background-color: var(--background-main);
+	padding: 0 0.5em;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */

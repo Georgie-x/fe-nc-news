@@ -12,6 +12,7 @@ function ContentControl() {
 					<Route path='/articles/:article_id/*' element={<SingleArticle />} />
 					<Route path='/topics' element={<AllTopics />} />
 					<Route path='/topics/:topic' element={<ArticlesByTopic />} />
+				
 					<Route path='/articles/*' element={<ErrorPage />} />
 					<Route path='/topics/*' element={<ErrorPage />} />
 					<Route path='/*' element={<ErrorPage />} />

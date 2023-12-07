@@ -10,6 +10,7 @@ import DeleteComment from "./DeleteComment"
 import CommentVotes from "./CommentVotes"
 import HomePage from "./HomePage"
 import SignIn from "./SignIn"
+import UserAccount from "./UserAccount"
 
 export {
 	AllArticles,
@@ -23,5 +24,6 @@ export {
 	DeleteComment,
 	CommentVotes,
 	HomePage,
-	SignIn
+	SignIn,
+	UserAccount
 }

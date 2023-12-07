@@ -1,6 +1,7 @@
-import { useContext, useState } from "react"
+import { useState, useContext } from "react"
 import { UserContext } from "../contexts/User"
 import axios from "axios"
+import UserAccount from "./UserAccount"
 
 function SignIn() {
 	const { user, setUser } = useContext(UserContext)
@@ -30,52 +31,45 @@ function SignIn() {
 		}
 	}
 
-	return (
+	return user ? (
+		<UserAccount />
+	) : (
 		<>
 			<div className='container'>
+			<h3>Please sign in to access all website features</h3>
 				<form onSubmit={handler}>
-					<label htmlFor='username-input'>Username</label>
-					<br />
-					<input
-						required
-						className='input'
-						id='username-input'
-						type='text'
-						placeholder='e.g. jessjelly'
-						onChange={(e) => {
-							setUsername(e.target.value)
-						}}
-					></input>
-					<br />
-					<label htmlFor='password-input'>Password</label>
-					<br />
-					<input
-						required
-						className='input'
-						id='password-input'
-						type='password'
-						placeholder='e.g. wordpass'
-						onChange={(e) => {
-							setPassword(e.target.value)
-						}}
-					></input>
-					<br />
-					<button type='submit'>SignIn</button>
-				</form>
+					<div className='form-container'>
+						<label htmlFor='username-input'>Username</label>
 
-				<br />
-				{isLoading ? (
-					<h3>loading...</h3>
-				) : (
-					<ul>
-						<li>{error}</li>
-						<li>{user.username}</li>
-						<li>{user.name}</li>
-						<li>
-							<img id='user' src={user.avatar_url} />
-						</li>
-					</ul>
-				)}
+						<input
+							required
+							className='input'
+							id='username-input'
+							type='text'
+							placeholder='e.g. jessjelly'
+							onChange={(e) => {
+								setUsername(e.target.value)
+							}}
+						></input>
+
+						<label htmlFor='password-input'>Password</label>
+
+						<input
+							required
+							className='input'
+							id='password-input'
+							type='password'
+							placeholder='e.g. wordpass'
+							onChange={(e) => {
+								setPassword(e.target.value)
+							}}
+						></input>
+						{isLoading ? <h3>loading...</h3> : <p></p>}
+						<button id='submit-signin' type='submit'>
+							SignIn
+						</button>
+					</div>
+				</form>
 			</div>
 		</>
 	)
